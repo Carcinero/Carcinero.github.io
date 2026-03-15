@@ -2,63 +2,65 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Carcinero's Space</title>
+    <title>Carcinero's Blue Void</title>
     <style>
         body { 
-            background-color: #000; 
-            color: #00ff00; 
+            background-color: #000510; /* Очень темно-синий, почти черный */
+            color: #00d4ff; /* Ярко-синий неоновый цвет */
             font-family: "Courier New", monospace; 
             background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
             display: flex; flex-direction: column; align-items: center; padding: 20px;
         }
         .profile-box { 
-            width: 750px; border: 3px double #00ff00; background: rgba(0,20,0,0.9); padding: 20px; 
-            box-shadow: 0 0 15px #00ff00; margin-top: 50px;
+            width: 750px; border: 3px solid #00d4ff; background: rgba(0, 10, 30, 0.9); padding: 20px; 
+            box-shadow: 0 0 20px #00d4ff; margin-top: 50px;
         }
-        h1 { text-align: center; color: #fff; text-shadow: 2px 2px #00ff00; letter-spacing: 5px; }
-        .status { background: #00ff00; color: #000; padding: 8px; font-weight: bold; margin-bottom: 20px; width: 100%; text-align: center; box-sizing: border-box; }
-        .info-section { display: flex; gap: 30px; border-bottom: 1px solid #00ff00; padding-bottom: 20px; }
-        .pic-box { width: 250px; height: 250px; border: 2px solid #00ff00; background: #111; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-        .pic-box img { width: 100%; height: 100%; object-fit: cover; }
-        .details { flex: 1; }
+        h1 { text-align: center; color: #fff; text-shadow: 0 0 10px #00d4ff; letter-spacing: 5px; }
+        
+        /* Синие надписи и акценты */
+        h3, p, b { color: #00d4ff; } 
+        
+        .status { background: #00d4ff; color: #000; padding: 8px; font-weight: bold; margin-bottom: 20px; width: 100%; text-align: center; box-sizing: border-box; }
+        .info-section { display: flex; gap: 30px; border-bottom: 1px solid #00d4ff; padding-bottom: 20px; }
+        .pic-box { width: 250px; height: 250px; border: 2px solid #00d4ff; background: #000; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        
         .top8 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-top: 20px; }
-        .friend { border: 1px solid #00ff00; padding: 5px; text-align: center; font-size: 11px; color: #fff; }
-        .friend-pic { height: 80px; background: #222; margin-bottom: 5px; border: 1px solid #00ff00; }
-        a { color: #00ff00; text-decoration: none; border-bottom: 1px dashed #00ff00; }
-        a:hover { background: #00ff00; color: #000; }
+        .friend { border: 1px solid #00d4ff; padding: 5px; text-align: center; font-size: 11px; color: #00d4ff; }
+        .friend-pic { height: 80px; background: #001a33; margin-bottom: 5px; border: 1px solid #00d4ff; }
+        
+        /* Эффект мигания для текста */
+        .blink { animation: blinker 1.5s linear infinite; }
+        @keyframes blinker { 50% { opacity: 0.3; } }
     </style>
 </head>
 <body>
 
 <div class="profile-box">
-    <h1>CARCINERO // MY_SPACE</h1>
-    <div class="status">СТАТУС: ОБМАНУЛ СИСТЕМУ И СОЗДАЛ СВОЙ САЙТ</div>
+    <h1>CARCINERO // BLUE_VOID</h1>
+    <div class="status">СТАТУС: <span class="blink">СИСТЕМА КАСТОМИЗИРОВАНА</span></div>
     
     <div class="info-section">
         <div class="pic-box">
-            <span style="color:#333; font-size: 40px;">[USER_PIC]</span>
+            <span style="color:#004466; font-size: 40px;">[PHOTO]</span>
         </div>
         <div class="details">
-            <h3 style="margin-top:0;">ОБО МНЕ:</h3>
+            <h3>ОБО МНЕ:</h3>
             <p><b>НИК:</b> Carcinero</p>
-            <p><b>ГОРОД:</b> Цифровое подполье</p>
-            <p><b>О СЕБЕ:</b> Neocities и SpaceHey не пустили, поэтому я здесь. Это мой личный MySpace в 2026 году.</p>
-            <p><b>МУЗЫКА:</b> <i>Synthwave / Witch House / 2007 OST</i></p>
+            <p><b>ЦВЕТ:</b> Electric Blue</p>
+            <p><b>ИНФО:</b> Теперь всё синее, как в старых фильмах про хакеров.</p>
         </div>
     </div>
 
-    <h3>TOP 8 FRIENDS (TRADITION):</h3>
+    <h3>TOP 8 FRIENDS:</h3>
     <div class="top8">
-        <div class="friend"><div class="friend-pic"></div>Tom (The Bot)</div>
+        <div class="friend"><div class="friend-pic"></div>Friend 1</div>
         <div class="friend"><div class="friend-pic"></div>Friend 2</div>
         <div class="friend"><div class="friend-pic"></div>Friend 3</div>
         <div class="friend"><div class="friend-pic"></div>Friend 4</div>
-        <div class="friend"><div class="friend-pic"></div>Friend 5</div>
-        <div class="friend"><div class="friend-pic"></div>Friend 6</div>
-        <div class="friend"><div class="friend-pic"></div>Friend 7</div>
-        <div class="friend"><div class="friend-pic"></div>Friend 8</div>
     </div>
 </div>
+
+<iframe width="0" height="0" src="https://www.youtube.com/embed/Tsg9SYMBvng?autoplay=1" frameborder="0" allow="autoplay"></iframe>
 
 </body>
 </html>
