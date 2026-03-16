@@ -4,114 +4,124 @@
     <meta charset="UTF-8">
     <title>Carcinero // Profile</title>
     <style>
+        /* Глобальные стили: чистый черный и глубокий синий */
         body { 
-            background-color: #000; /* Черный фон */
-            color: #4a76a8; /* Стальной синий текст */
-            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; /* Шрифт как в старых соцсетях */
+            background-color: #000000; 
+            color: #ffffff; 
+            font-family: Arial, sans-serif; 
             margin: 0; padding: 0;
-            background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
         }
 
-        /* Верхний плеер NTS Style */
+        /* Плеер NTS Style вверху */
         .top-bar {
-            width: 100%; height: 45px; background: #001d3d; 
-            border-bottom: 2px solid #004080;
+            width: 100%; height: 50px; background: #000814; 
+            border-bottom: 2px solid #003366;
             display: flex; align-items: center; justify-content: space-between;
             padding: 0 20px; position: fixed; top: 0; z-index: 1000; box-sizing: border-box;
         }
-        .player-info { font-size: 11px; color: #fff; font-family: monospace; }
-        audio { height: 25px; filter: invert(0.8) hue-rotate(180deg); }
+        .player-info { font-size: 11px; color: #0080ff; font-family: monospace; text-transform: uppercase; }
+        audio { height: 30px; filter: invert(1) hue-rotate(180deg) brightness(1.5); }
 
-        /* Контейнер страницы */
-        .main-wrapper { width: 850px; margin: 80px auto 50px; display: grid; grid-template-columns: 300px 1fr; gap: 20px; }
+        /* Контейнер как на референсе */
+        .wrapper { width: 900px; margin: 80px auto 50px; display: flex; gap: 25px; }
 
-        /* Общий стиль блоков */
-        .box { border: 1px solid #004080; background: #050f1a; padding: 15px; margin-bottom: 20px; }
-        .box-title { background: #001d3d; color: #fff; padding: 5px 10px; font-weight: bold; margin: -15px -15px 15px -15px; border-bottom: 1px solid #004080; }
+        /* Левая колонка (узкая) */
+        .left-col { width: 320px; }
+        .user-name { font-size: 26px; font-weight: bold; margin-bottom: 15px; color: #ffffff; }
+        .main-pic { width: 100%; border: 1px solid #003366; background: #000; margin-bottom: 15px; }
 
-        /* Левая колонка */
-        .profile-side h2 { font-size: 22px; color: #fff; margin: 0 0 10px 0; }
-        .pic-box { border: 2px solid #004080; background: #000; line-height: 0; margin-bottom: 15px; }
-        .pic-box img { width: 100%; height: auto; }
-        
-        .contact-box { font-size: 12px; }
-        .contact-box div { border-bottom: 1px solid #1a2a3a; padding: 5px 0; color: #6a95cc; }
+        /* Правая колонка (широкая) */
+        .right-col { flex-grow: 1; }
 
-        /* Правая колонка */
-        .extended-network { border: 2px solid #004080; background: #001d3d; color: #fff; padding: 10px; text-align: center; font-weight: bold; margin-bottom: 20px; }
-        
-        .blurbs-title { color: #fff; font-size: 18px; font-weight: bold; margin-bottom: 10px; }
-        .section-sub { color: #6a95cc; font-weight: bold; margin: 15px 0 5px 0; }
-        
-        .table-info { width: 100%; font-size: 13px; border-collapse: collapse; }
-        .table-info td { padding: 5px; border: 1px solid #1a2a3a; }
-        .td-label { background: #0a1a2e; color: #fff; width: 100px; font-weight: bold; }
+        /* Блоки с синими заголовками */
+        .box { border: 1px solid #003366; background: #000000; margin-bottom: 20px; overflow: hidden; }
+        .box-header { background: #001a33; color: #ffffff; padding: 6px 10px; font-weight: bold; font-size: 14px; border-bottom: 1px solid #003366; }
+        .box-content { padding: 15px; color: #b0c4de; font-size: 14px; line-height: 1.5; }
 
+        /* Специальная плашка Extended Network */
+        .network-bar { background: #001a33; border: 2px solid #003366; color: #ffffff; padding: 12px; text-align: center; font-weight: bold; margin-bottom: 20px; font-size: 16px; }
+
+        /* Таблица интересов */
+        .interests-table { width: 100%; border-collapse: collapse; }
+        .interests-table td { padding: 8px; border-bottom: 1px solid #001a33; vertical-align: top; }
+        .label { color: #0080ff; font-weight: bold; width: 80px; }
+
+        /* Ссылки (кнопки контакта) */
+        .contact-links { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; }
+        .contact-links a { color: #0080ff; text-decoration: none; font-size: 12px; border: 1px solid #001a33; padding: 5px; text-align: center; background: #000814; }
+        .contact-links a:hover { background: #003366; color: #fff; }
+
+        b { color: #ffffff; }
     </style>
 </head>
 <body>
 
 <div class="top-bar">
-    <div class="player-info">NOW PLAYING: SkinWalkerOG</div>
-    <audio controls><source src="skinwalkerog.mp3" type="audio/mpeg"></audio>
+    <div class="player-info">NOW PLAYING: skinwalkerog</div>
+    <audio controls autoplay><source src="skinwalkerog.mp3" type="audio/mpeg"></audio>
 </div>
 
-<div class="main-wrapper">
+<div class="wrapper">
     
-    <div class="profile-side">
-        <h2>Carcinero</h2>
-        <div class="pic-box">
-            <img src="https://i.pinimg.com/originals/f4/d2/96/f4d2961b65637a7b839711696f7436b8.gif">
-        </div>
+    <div class="left-col">
+        <div class="user-name">Carcinero</div>
+        <img src="https://i.pinimg.com/originals/f4/d2/96/f4d2961b65637a7b839711696f7436b8.gif" class="main-pic">
         
-        <div class="box contact-box">
-            <div class="box-title">Contacting Carcinero</div>
-            <div>[ Send Message ]</div>
-            <div>[ Add to Friends ]</div>
-            <div>[ Share Profile ]</div>
-            <div>[ Block User ]</div>
+        <div class="box">
+            <div class="box-header">Contacting Carcinero</div>
+            <div class="box-content">
+                <div class="contact-links">
+                    <a href="#">Send Message</a>
+                    <a href="#">Add Friend</a>
+                    <a href="#">Share</a>
+                    <a href="#">Block</a>
+                </div>
+            </div>
         </div>
 
         <div class="box">
-            <div class="box-title">Interests</div>
-            <table class="table-info">
-                <tr><td class="td-label">Music</td><td>Skinwalker, Witch House, Dark Ambient</td></tr>
-                <tr><td class="td-label">Status</td><td>In the Void</td></tr>
-            </table>
+            <div class="box-header">Interests</div>
+            <div class="box-content">
+                <table class="interests-table">
+                    <tr><td class="label">Music</td><td>Witch House, Phonk, Dark Ambient</td></tr>
+                    <tr><td class="label">Status</td><td>Digital Ghost</td></tr>
+                </table>
+            </div>
         </div>
     </div>
 
-    <div class="profile-main">
-        <div class="extended-network">
+    <div class="right-col">
+        <div class="network-bar">
             Carcinero is in your extended network
         </div>
 
         <div class="box">
-            <div class="box-title">Carcinero's Latest Blog Entry</div>
-            <div style="font-size: 13px;">
-                <b>UPDATE:</b> Website successfully migrated to GitHub. <br>
-                <b>STATUS:</b> All systems operational. [16.03.2026]
+            <div class="box-header">Carcinero's Latest Blog Entry</div>
+            <div class="box-content">
+                <b>UPDATE:</b> System migration complete. Dark Blue mode engaged.<br>
+                <small>[ Posted: 16.03.2026 ]</small>
             </div>
         </div>
 
-        <div class="blurbs-title">Carcinero's Blurbs</div>
-        
-        <div class="section-sub">About me:</div>
-        <div style="font-size: 14px; line-height: 1.4;">
-            I am a digital drifter from the year 2026. While everyone else is stuck in 
-            closed platforms and invitation-only bubbles, I decided to build my own 
-            little corner of the internet. <br><br>
-            This space is built on <b>GitHub</b>, powered by <b>Dark Blue</b> energy, 
-            and dedicated to the aesthetic of the early web. No algorithms, no ads. 
-            Just code and music.
+        <div style="color: #0080ff; font-size: 20px; font-weight: bold; margin: 25px 0 10px 5px;">Carcinero's Blurbs</div>
+
+        <div class="box">
+            <div class="box-header">About me:</div>
+            <div class="box-content">
+                I am a digital drifter from the year 2026. While everyone else is stuck in 
+                closed platforms and invitation-only bubbles, I decided to build my own 
+                little corner of the internet. <br><br>
+                This space is built on <b>GitHub</b>, powered by <b>Dark Blue</b> energy, 
+                and dedicated to the aesthetic of the early web.
+            </div>
         </div>
 
-        <div class="section-sub">Who I'd like to meet:</div>
-        <div style="font-size: 14px;">
-            Other digital ghosts, coders, and people who miss the old web. 
-            If you're reading this, you're already one of us.
+        <div class="box">
+            <div class="box-header">Who I'd like to meet:</div>
+            <div class="box-content">
+                People who still remember what a personal web-page feels like.
+            </div>
         </div>
-
     </div>
 
 </div>
