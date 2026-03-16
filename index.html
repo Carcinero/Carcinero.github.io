@@ -4,70 +4,63 @@
     <meta charset="UTF-8">
     <title>Carcinero // Void</title>
     <style>
-        /* Глобальные настройки: глубокий синий и черный */
         body { 
-            background-color: #00020a; /* Почти черный */
-            color: #4da6ff; /* Приятный голубой для текста */
-            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; 
+            background-color: #000000; 
+            color: #4da6ff; 
+            font-family: Arial, sans-serif; 
             margin: 0; padding: 0;
             display: flex; justify-content: center;
         }
 
-        /* Верхний плеер (Точная стилизация под NTS) */
+        /* Плеер NTS Style БЕЗ белых краев */
         .top-bar {
-            width: 100%; height: 50px; background: #000814; 
-            border-bottom: 3px solid #004cff; /* Яркая синяя полоса */
+            width: 100%; height: 50px; background: #000000; 
+            border-bottom: 4px solid #004cff; 
             display: flex; align-items: center; justify-content: space-between;
             padding: 0 20px; position: fixed; top: 0; z-index: 1000; box-sizing: border-box;
         }
-        .player-info { font-size: 11px; color: #fff; font-family: monospace; font-weight: bold; letter-spacing: 1px; }
+        .player-info { font-size: 11px; color: #fff; font-family: monospace; font-weight: bold; }
         
-        /* КРАСИМ ПЛЕЕР (NTS STYLE) */
         audio { 
             height: 30px; 
-            filter: invert(1) hue-rotate(180deg) brightness(1.5); /* Бело-синий плеер */
-            background: #000; /* Черный фон внутри */
-            border-radius: 0; /* Четкие углы */
+            filter: invert(1) hue-rotate(180deg) brightness(1.5);
+            /* Этот код обрезает белые края браузерного плеера */
+            clip-path: inset(0px 0px 0px 0px rounded 15px);
+            outline: none;
         }
 
-        /* Контейнер: фото слева, описание справа */
         .wrapper { 
             width: 850px; margin-top: 100px; 
             display: grid; grid-template-columns: 300px 1fr; gap: 40px; 
-            align-items: flex-start;
         }
 
-        /* Левая колонка */
         .left-col { text-align: left; }
-        .name-header { font-size: 28px; color: #fff; margin-bottom: 15px; font-weight: bold; font-family: 'Courier New', monospace; }
+        .name-header { font-size: 28px; color: #fff; margin-bottom: 15px; font-weight: bold; }
         
-        /* ЖИРНЫЙ КОНТУР ДЛЯ ФОТО */
+        /* Еще более жирный и яркий контур для фото */
         .photo-frame { 
             width: 300px; height: 300px; 
-            border: 4px solid #004cff; /* Жирная синяя рамка Web 1.0 */
-            background: #000; 
-            overflow: hidden; box-sizing: border-box; 
+            border: 5px solid #004cff; 
+            background: #000; overflow: hidden; 
         }
         .photo-frame img { width: 100%; height: 100%; object-fit: cover; }
 
-        /* Правая колонка */
         .right-col { display: flex; flex-direction: column; gap: 20px; }
         
-        /* ЖИРНЫЕ РАМКИ БЛОКОВ */
+        /* Жирные рамки блоков */
         .content-box { 
-            border: 3px solid #004cff; /* Жирная синяя рамка */
-            background: #00050f; /* Глубокий темно-синий фон блока */
-            padding: 25px; box-sizing: border-box;
+            border: 4px solid #004cff; 
+            background: #00050f; padding: 25px;
         }
         
         .box-title { 
-            color: #fff; border-bottom: 2px solid #004cff; 
+            color: #fff; border-bottom: 3px solid #004cff; 
             padding-bottom: 12px; margin-bottom: 15px; 
-            font-size: 16px; letter-spacing: 2px; text-transform: uppercase; font-weight: bold;
+            font-size: 16px; font-weight: bold; text-transform: uppercase;
         }
         
-        p { margin: 10px 0; font-size: 14px; line-height: 1.6; color: #c0d8ff; }
-        b { color: #80bfff; } /* Цвет для акцентов */
+        p { margin: 10px 0; font-size: 14px; line-height: 1.6; color: #fff; }
+        b { color: #004cff; }
     </style>
 </head>
 <body>
