@@ -2,52 +2,57 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Carcinero's Dark Blue</title>
+    <title>Carcinero's Void</title>
     <style>
         body { 
-            background-color: #00030a; 
-            color: #0044cc; 
+            background-color: #050a14; /* Еще темнее синий */
+            color: #4da6ff; /* Приятный голубой */
             font-family: "Courier New", monospace; 
-            display: flex; flex-direction: column; align-items: center; padding: 20px;
+            display: flex; justify-content: center; align-items: center; 
+            min-height: 100vh; margin: 0;
         }
         .profile-box { 
-            width: 750px; border: 2px solid #0033aa; background: #000814; padding: 20px; margin-top: 50px;
+            width: 600px; border: 1px solid #4da6ff; 
+            background: rgba(5, 10, 20, 0.9); padding: 30px; 
+            box-shadow: 0 0 30px rgba(77, 166, 255, 0.2);
         }
-        h1 { text-align: center; color: #0044cc; letter-spacing: 5px; }
-        .status { border: 1px solid #0033aa; padding: 8px; margin-bottom: 20px; text-align: center; }
-        .info-section { display: flex; gap: 30px; border-bottom: 1px solid #002288; padding-bottom: 20px; }
-        .pic-box { width: 250px; height: 250px; border: 1px solid #0033aa; background: #000; display: flex; align-items: center; justify-content: center; }
-        .top8 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-top: 20px; }
-        .friend { border: 1px solid #002288; padding: 5px; text-align: center; font-size: 11px; }
-        .friend-pic { height: 80px; background: #000; border: 1px solid #002288; margin-bottom: 5px; }
-        .player { margin-top: 20px; text-align: center; border-top: 1px dashed #002288; padding-top: 15px; }
+        h1 { text-align: center; color: #fff; letter-spacing: 5px; margin-top: 0; border-bottom: 1px solid #4da6ff; padding-bottom: 15px; }
+        
+        .main-info { display: flex; gap: 25px; align-items: center; margin: 20px 0; }
+        .user-pic { width: 200px; height: 200px; border: 1px solid #4da6ff; overflow: hidden; }
+        .user-pic img { width: 100%; height: 100%; object-fit: cover; }
+        
+        .details h3 { color: #fff; margin-bottom: 5px; }
+        p { margin: 5px 0; font-size: 14px; }
+
+        /* Стилизация плеера */
+        .player-container { margin-top: 20px; text-align: center; background: #0a1526; padding: 10px; border: 1px dashed #4da6ff; }
+        audio { width: 100%; filter: invert(80%) hue-rotate(180deg); height: 30px; } /* Красим стандартный плеер под синий неон */
     </style>
 </head>
 <body>
 
 <div class="profile-box">
     <h1>CARCINERO</h1>
-    <div class="status">SYSTEM: ONLINE / COLOR: DARK BLUE</div>
     
-    <div class="info-section">
-        <div class="pic-box">[VOID]</div>
-        <div>
+    <div class="main-info">
+        <div class="user-pic">
+            <img src="https://i.pinimg.com/originals/f4/d2/96/f4d2961b65637a7b839711696f7436b8.gif">
+        </div>
+        <div class="details">
             <h3>INFO:</h3>
             <p><b>USER:</b> Carcinero</p>
             <p><b>SONG:</b> Skinwalker</p>
+            <p><b>STATUS:</b> DARK BLUE VOID</p>
         </div>
     </div>
 
-    <h3>TOP 8 FRIENDS:</h3>
-    <div class="top8">
-        <div class="friend"><div class="friend-pic"></div>Friend 1</div>
-        <div class="friend"><div class="friend-pic"></div>Friend 2</div>
-        <div class="friend"><div class="friend-pic"></div>Friend 3</div>
-        <div class="friend"><div class="friend-pic"></div>Friend 4</div>
-    </div>
-
-    <div class="player">
-        <iframe width="100%" height="120" src="https://www.youtube.com/embed/Tsg9SYMBvng?color=white&theme=dark" frameborder="0" allow="autoplay; encrypted-media"></iframe>
+    <div class="player-container">
+        <p style="font-size: 10px; margin-bottom: 8px;">PLAYER.EXE // NOW PLAYING</p>
+        <audio controls>
+            <source src="music.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
     </div>
 </div>
 
