@@ -4,122 +4,106 @@
     <meta charset="UTF-8">
     <title>Carcinero // Profile</title>
     <style>
-        /* Глобальные стили: чистый черный и глубокий синий */
+        /* Настоящий глубокий синий и черный без тусклости */
         body { 
             background-color: #000000; 
             color: #ffffff; 
             font-family: Arial, sans-serif; 
             margin: 0; padding: 0;
+            background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
         }
 
-        /* Плеер NTS Style вверху */
+        /* Плеер NTS Style — оставляем, он был хорош */
         .top-bar {
-            width: 100%; height: 50px; background: #000814; 
-            border-bottom: 2px solid #003366;
+            width: 100%; height: 50px; background: #001226; 
+            border-bottom: 3px solid #004cff;
             display: flex; align-items: center; justify-content: space-between;
             padding: 0 20px; position: fixed; top: 0; z-index: 1000; box-sizing: border-box;
         }
-        .player-info { font-size: 11px; color: #0080ff; font-family: monospace; text-transform: uppercase; }
+        .player-info { font-size: 11px; color: #004cff; font-family: monospace; font-weight: bold; }
         audio { height: 30px; filter: invert(1) hue-rotate(180deg) brightness(1.5); }
 
-        /* Контейнер как на референсе */
-        .wrapper { width: 900px; margin: 80px auto 50px; display: flex; gap: 25px; }
+        /* Контейнер — делаем широким как на MySpace */
+        .main-container { 
+            width: 900px; margin: 80px auto; display: flex; gap: 20px; 
+        }
 
-        /* Левая колонка (узкая) */
-        .left-col { width: 320px; }
-        .user-name { font-size: 26px; font-weight: bold; margin-bottom: 15px; color: #ffffff; }
-        .main-pic { width: 100%; border: 1px solid #003366; background: #000; margin-bottom: 15px; }
+        /* Левая часть: Имя и фото */
+        .left-col { width: 350px; }
+        .user-name { font-size: 28px; font-weight: bold; color: #ffffff; margin-bottom: 10px; }
+        .main-photo { width: 100%; border: 2px solid #004cff; background: #050505; }
+        
+        .contact-box { 
+            border: 2px solid #004cff; background: #001226; margin-top: 15px; padding: 10px;
+        }
+        .contact-box div { border-bottom: 1px solid #004cff; padding: 5px; color: #004cff; font-size: 13px; font-weight: bold; }
 
-        /* Правая колонка (широкая) */
-        .right-col { flex-grow: 1; }
+        /* Правая часть: Блоки инфы */
+        .right-col { flex: 1; }
+        
+        /* Та самая розовая плашка, но СИНЯЯ */
+        .network-banner { 
+            background: #004cff; color: #fff; padding: 15px; text-align: center; 
+            font-weight: bold; font-size: 18px; border: 2px solid #fff; margin-bottom: 20px;
+        }
 
-        /* Блоки с синими заголовками */
-        .box { border: 1px solid #003366; background: #000000; margin-bottom: 20px; overflow: hidden; }
-        .box-header { background: #001a33; color: #ffffff; padding: 6px 10px; font-weight: bold; font-size: 14px; border-bottom: 1px solid #003366; }
-        .box-content { padding: 15px; color: #b0c4de; font-size: 14px; line-height: 1.5; }
+        .box { border: 2px solid #004cff; background: #00081a; margin-bottom: 20px; }
+        .box-header { background: #004cff; color: #ffffff; padding: 8px 12px; font-weight: bold; }
+        .box-content { padding: 15px; font-size: 14px; line-height: 1.6; color: #e0e0e0; }
 
-        /* Специальная плашка Extended Network */
-        .network-bar { background: #001a33; border: 2px solid #003366; color: #ffffff; padding: 12px; text-align: center; font-weight: bold; margin-bottom: 20px; font-size: 16px; }
-
-        /* Таблица интересов */
-        .interests-table { width: 100%; border-collapse: collapse; }
-        .interests-table td { padding: 8px; border-bottom: 1px solid #001a33; vertical-align: top; }
-        .label { color: #0080ff; font-weight: bold; width: 80px; }
-
-        /* Ссылки (кнопки контакта) */
-        .contact-links { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; }
-        .contact-links a { color: #0080ff; text-decoration: none; font-size: 12px; border: 1px solid #001a33; padding: 5px; text-align: center; background: #000814; }
-        .contact-links a:hover { background: #003366; color: #fff; }
-
-        b { color: #ffffff; }
+        .about-title { color: #004cff; font-size: 22px; font-weight: bold; margin-bottom: 10px; }
+        
+        b { color: #004cff; }
     </style>
 </head>
 <body>
 
 <div class="top-bar">
-    <div class="player-info">NOW PLAYING: skinwalkerog</div>
-    <audio controls autoplay><source src="skinwalkerog.mp3" type="audio/mpeg"></audio>
+    <div class="player-info">NOW PLAYING: SKINWALKEROG.MP3</div>
+    <audio controls autoplay><source src="SKINWALKEROG.MP3" type="audio/mpeg"></audio>
 </div>
 
-<div class="wrapper">
+<div class="main-container">
     
     <div class="left-col">
         <div class="user-name">Carcinero</div>
-        <img src="https://i.pinimg.com/originals/f4/d2/96/f4d2961b65637a7b839711696f7436b8.gif" class="main-pic">
+        <img src="https://i.pinimg.com/originals/f4/d2/96/f4d2961b65637a7b839711696f7436b8.gif" class="main-photo">
         
-        <div class="box">
-            <div class="box-header">Contacting Carcinero</div>
-            <div class="box-content">
-                <div class="contact-links">
-                    <a href="#">Send Message</a>
-                    <a href="#">Add Friend</a>
-                    <a href="#">Share</a>
-                    <a href="#">Block</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="box">
-            <div class="box-header">Interests</div>
-            <div class="box-content">
-                <table class="interests-table">
-                    <tr><td class="label">Music</td><td>Witch House, Phonk, Dark Ambient</td></tr>
-                    <tr><td class="label">Status</td><td>Digital Ghost</td></tr>
-                </table>
-            </div>
+        <div class="contact-box">
+            <div style="background: #004cff; color: #fff; margin: -10px -10px 10px -10px; padding: 5px 10px;">Contacting Carcinero</div>
+            <div>[ Send Message ]</div>
+            <div>[ Add to Friends ]</div>
+            <div>[ Share Profile ]</div>
+            <div>[ Block User ]</div>
         </div>
     </div>
 
     <div class="right-col">
-        <div class="network-bar">
+        <div class="network-banner">
             Carcinero is in your extended network
         </div>
 
         <div class="box">
             <div class="box-header">Carcinero's Latest Blog Entry</div>
             <div class="box-content">
-                <b>UPDATE:</b> System migration complete. Dark Blue mode engaged.<br>
-                <small>[ Posted: 16.03.2026 ]</small>
+                <b>SITE STATUS:</b> DEEP BLUE VOID ENABLED. <br>
+                <b>LOG:</b> Working on the perfect 2000s layout.
             </div>
         </div>
 
-        <div style="color: #0080ff; font-size: 20px; font-weight: bold; margin: 25px 0 10px 5px;">Carcinero's Blurbs</div>
-
+        <div class="about-title">About me:</div>
         <div class="box">
-            <div class="box-header">About me:</div>
             <div class="box-content">
-                I am a digital drifter from the year 2026. While everyone else is stuck in 
-                closed platforms and invitation-only bubbles, I decided to build my own 
-                little corner of the internet. <br><br>
-                This space is built on <b>GitHub</b>, powered by <b>Dark Blue</b> energy, 
-                and dedicated to the aesthetic of the early web.
+                I am a digital drifter from the year 2026. This is my little corner of the internet, 
+                built with raw code and powered by <b>Dark Blue</b> energy. <br><br>
+                No algorithms. No corporate rules. Just the old web spirit.
             </div>
         </div>
 
+        <div class="about-title">Who I'd like to meet:</div>
         <div class="box">
-            <div class="box-header">Who I'd like to meet:</div>
             <div class="box-content">
-                People who still remember what a personal web-page feels like.
+                Anyone who appreciates the beauty of a custom personal page.
             </div>
         </div>
     </div>
